@@ -1,0 +1,220 @@
+#cxFoto{
+    display: none;
+    position:absolute; 
+    left:412px; 
+    top:0px;
+    width:135px; 
+    height:145px;
+    border:1px solid #666; 
+    font-size: 15px; 
+    font-weight: bold;
+}
+
+#cargo{
+    display: block;
+    position:absolute; 
+    left:85px; 
+    top:56px; 
+    width:300px; 
+    height:30px;
+    border:0px solid #0cc; 
+    font-size: 22px; 
+    font-weight: 400;
+    letter-spacing:1.5px;
+}
+
+#numeroLabel{
+    display: none;
+    position:absolute; 
+    left:1px; 
+    top:125px; 
+    width:250px; 
+    height:20px;
+    border:0px solid #000;
+    font-size: 15px; 
+    font-weight: 500;
+    padding: 2px;
+}
+
+#cxNumero1{
+    display: block;
+    position:absolute; 
+    left:75px; 
+    top:120px; 
+    width:22px; 
+    height:27px;
+    border:1px solid #666;
+    font-size: 25px; 
+    font-weight: 400;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+#cxNumero2{
+    display: block;
+    position:absolute; 
+    left:104px; 
+    top:120px; 
+    width:22px; 
+    height:27px;
+    border:1px solid #666;
+    font-family: arial;
+    font-size: 25px; 
+    font-weight: 400;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+#cxNumero3{
+    display: block;
+    position:absolute; 
+    left:133px; 
+    top:120px; 
+    width:22px; 
+    height:27px;
+    border:1px solid #666;
+    font-family: arial;
+    font-size: 25px; 
+    font-weight: 400;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+#cxNumero4{
+    display: block;
+    position:absolute; 
+    left:162px; 
+    top:120px; 
+    width:22px; 
+    height:27px;
+    border:1px solid #666;
+    font-family: arial;
+    font-size: 25px; 
+    font-weight: 400;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+#cxNumero5{
+    display: block;
+    position:absolute; 
+    left:191px; 
+    top:120px; 
+    width:22px; 
+    height:27px;
+    border:1px solid #666;
+    font-family: arial;
+    font-size: 25px; 
+    font-weight: 400;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+#avisoErrado{
+    display: none;
+    position:absolute; 
+    left:2px; 
+    top:175px; 
+    width:280px; 
+    height:20px;
+    border:0px solid #000;
+    letter-spacing:0.5px;
+    font-size: 20px;
+}
+
+#avisoInexistente{
+    display: none;
+    position:absolute; 
+    left:2px; 
+    top:175px; 
+    width:280px; 
+    height:20px;
+    border:0px solid #000;
+    letter-spacing:0.5px;
+    font-size: 20px;
+}
+
+#avisoNulo{
+    display: none;
+    position:absolute; 
+    left:190px; 
+    top:210px; 
+    width:250px; 
+    height:20px;
+    border:0px solid #000;
+    letter-spacing:0.5px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+#avisoLegenda{
+    display: none;
+    position:absolute; 
+    left:200px; 
+    top:214px; 
+    width:450px; 
+    height:20px;
+    border:0px solid #000;
+    letter-spacing:0.5px;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+#candidatoLabel{
+    display: none;
+    position:absolute; 
+    left:1px; 
+    top:167px; 
+    width:35px; 
+    height:20px;
+    border:0px solid #000;
+    font-family: arial;
+    font-size: 15px; 
+    font-weight: 300;
+    padding: 2px;
+}
+
+#candidatoNome{
+    display: none;
+    position:absolute; 
+    left:73px; 
+    top:167px; 
+    width:250px; 
+    height:20px;
+    border:0px solid #fc0;
+    font-size: 16px; 
+    font-weight: 500;
+    letter-spacing:0.5px;
+    padding: 2px;
+}
+
+#partidoLabel{
+    display: none;
+    position:absolute; 
+    left:1px; 
+    top:225px; 
+    width:35px; 
+    height:20px;
+    border:0px solid #000;
+    font-family: arial;
+    font-size: 14px; 
+    font-weight: 300;
+    padding: 2px;
+    
+}
+
+#partidoNome{
+    display: none;
+    position:absolute; 
+    left:73px; 
+    top:223px; 
+    width:290px; 
+    height:20px;
+    z-index:31; 
+    visibility:visible; 
+    border:0px solid #000;
+    font-family: arial;
+    font-size: 16px; 
+    font-weight: 400;
+    padding: 2px;
+}

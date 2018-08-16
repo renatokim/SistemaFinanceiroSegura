@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class="no-js" xml:lang="pt-br">
+<!--<![endif]-->
+  <head>
+    <title>Simulador Urna Eletronica</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="Janela" name="DC.portal_type" />
+    <meta content="Simulador - Eleição 2016" name="DC.title" />
+    <meta content="/simulador-2016/vereador.html" name="DC.remoteurl" />
+    <meta content="850em" name="DC.page_height" />
+    <meta content="2016-04-25" name="DC.date.created" />
+    <meta content="2016-06-02" name="DC.date.modified" />
+    <meta content="Tribunal Superior Eleitoral" name="DC.publisher.root" />
+    <meta content="Tribunal Superior Eleitoral" name="DC.publisher" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Plone - http://plone.org" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.tse.jus.br/portal_css/je_portal_tema/reset-cachekey-bbdd518e50e7d0fec8cd78d4538ac9f7.css" />
+    <style type="text/css" media="screen">@import url(http://www.tse.jus.br/portal_css/je_portal_tema/base-cachekey-457b102c5f5d377558e08a907d0ffb24.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.tse.jus.br/portal_css/je_portal_tema/resourcetinymce.stylesheetstinymce-cachekey-f21d72f0c045d3a208aca233c7331d2a.css" />
+    <style type="text/css">@import url(http://www.tse.jus.br/portal_css/je_portal_tema/print-cachekey-a5a4a7422fa74e331635625f9dc6f2a5.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.tse.jus.br/portal_css/je_portal_tema/resourceplone.app.discussion.stylesheetsdiscussion-cachekey-7f4437db4d33af13270b0babc077c45b.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.tse.jus.br/portal_css/je_portal_tema/kupuplone-cachekey-5a9259980400448a0ea1f2c22b951f7e.css" />
+    <style type="text/css" media="all">@import url(http://www.tse.jus.br/portal_css/je_portal_tema/ploneCustom-cachekey-1764a11db126448dc821907b71a1c717.css);</style>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.tse.jus.br/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://www.tse.jus.br/touch_icon.png" />
+    <link rel="search" href="http://www.tse.jus.br/@@search" title="Buscar neste site" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/contraste-portal.css" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/portal.css" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/estilo.css" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/grid-32.css" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/impressao.css" type="text/css" media="print" />
+<!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="http://www.justicaeleitoral.jus.br/temas/css/ie_fixes-min.css"/>
+        <![endif]-->
+<!--[if IE 8]>
+            <link rel="stylesheet" type="text/css" href="http://www.justicaeleitoral.jus.br/temas/css/ie8_fixes-min.css"/>
+        <![endif]-->
+<!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="http://www.justicaeleitoral.jus.br/temas/css/ie7_fixes-min.css"/>
+        <![endif]-->
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/estilo-tablet.css" type="text/css" media="screen and (min-width: 481px) and (max-width: 768px)" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/menuMin769.css" type="text/css" media="screen and (max-width: 769px)" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/estilo-mobile.css" type="text/css" media="screen and (max-width: 480px)" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/grid-32-mobile.css" type="text/css" media="screen and (max-width: 480px)" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" />
+    <link rel="stylesheet" href="http://www.justicaeleitoral.jus.br/temas/css/reset-min.css" />
+<!--<link rel="stylesheet" href="css/logo-tribunal.css" type="text/css" />-->
+    <script type="text/javascript" src="http://www.tse.jus.br/portal_javascripts/je_portal_tema/resourceplone.app.jquery-cachekey-9ce6ed57ed874087711e0ac495570a45.js"></script>
+    <script type="text/javascript" src="http://www.tse.jus.br/portal_javascripts/je_portal_tema/kss-bbb-cachekey-dcc3ee1579968bb0014c5ec37be378d0.js"></script>
+    <script type="text/javascript" src="http://www.tse.jus.br/portal_javascripts/je_portal_tema/searchJE-cachekey-f48340d23b29933fc41c03c87847b904.js"></script>
+    <script src="http://www.justicaeleitoral.jus.br/temas/js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="http://www.justicaeleitoral.jus.br/temas/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+    <script type="text/javascript" src="http://www.justicaeleitoral.jus.br/temas/js/script-geral.js"></script>
+    <script src="http://www.justicaeleitoral.jus.br/temas/js/respond.min.js"></script>
+    <script src="http://www.justicaeleitoral.jus.br/temas/js/footable.js" type="text/javascript"></script>
+    <script type="text/javascript">
+            $(function () {
+                $('.footable').footable();
+            });
+        </script>
+    <script type="text/javascript" src="http://www.justicaeleitoral.jus.br/temas/js/jquery.cookie.js"></script>
+  </head>
+  <body class="template-janela_left portaltype-janela site-tse section-eleicoes subsection-eleicoes-2016 subsection-eleicoes-2016-simulador-de-votacao subsection-eleicoes-2016-simulador-de-votacao-simulador-eleicao-2016 userrole-anonymous" dir="ltr">
+    <section class="container" id="section-master"><div class="span-32 last" id="central"><!--Fim Menu Inferior-->
+		<!--ComeÃ§o Menu Lateral-->
+		<!--Fim Menu Lateral--><!--ComeÃ§o ConteÃºdo Principal--><section role="main" id="conteudoPrincipal"><!--ComeÃ§o breadcrumbs--><section id="portal-breadcrumbs" class="span-32 last"><div class="visualClear"><!-- --></div></section><!--Fim breadcrumbs--><!--ComeÃ§o conteÃºdo--><div class="">
+                        <div class="documentContent span-32" id="region-content"><div id="viewlet-above-content"></div><div class=""><dl class="portalMessage info" id="kssPortalMessage" style="display:none"><dt>Info</dt><dd></dd></dl><div id="content"><div><div id="conteudo_janela"><section id="textoConteudo" class="span-32">
+						<iframe src="vereador.html" name="windowZ" id="windowZ" marginwidth="0" marginheight="0" width="100%" height="850em" frameborder="0" title="Simulador - Eleição 2016"><span>The link address is:</span><a href="http://www.tse.jus.br/hotsites/simulador-2016/vereador.html">http://www.tse.jus.br/hotsites/simulador-2016/vereador.html</a></iframe></section></div><section id="responsavel-conteudo" class="span-26 prepend-3 append-3 last"><div class="maisInformacoes"><a class="maisInformacoesBotao" href="javascript:;"><p>Gestor Responsável: Seção de Voto Informatizado <span>+</span></p></a><section style="display:None" id="box-mais-informacoes"><p>Telefone: <br /> +55(61) 3030-8803 </p><p>E-mail: <a href="mailto:sevin@tse.jus.br">sevin@tse.jus.br</a></p><p class="atualizacaoConteudo"> Última atualização: 02/06/2016 12:05</p><a class="maisInformacoesBotao" href="javascript:;"><span>x</span></a></section></div></section><section id="compartilhar_portal" role="application" aria-label="compartilhar conteúdo"><div id="compartilhar_email"><div id="c_id_email"><a href="http://www.tse.jus.br/eleicoes/eleicoes-2016/simulador-de-votacao/simulador-eleicao-2016/sendto_form"><span style="display:none">Compartilhar via email</span></a></div></div><div id="compartilhar_face"><div id="fb-root"></div><script>
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "http://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}
+			(document, 'script', 'facebook-jssdk'));
+		</script><div class="fb-share-button" data-href="http://www.tse.jus.br/eleicoes/eleicoes-2016/simulador-de-votacao/simulador-eleicao-2016" data-layout="button"></div></div><div id="compartilhar_twitter"><a alt="Postar no twitter" href="https://twitter.com/share" target="_blank" data-lang="pt" data-count="none"><span style="display:none">Compartilhar via twitter</span></a></div><div id="compartilhar_whatsapp"></div><div id="compartilhar_google" class="g-plus" data-action="share" data-annotation="none"></div></section><!-- Place this tag after the last share tag. --><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><script type="text/javascript">
+  window.___gcfg = {lang: 'pt-BR'};
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script><div class="links-destacados span-26 prepend-3 append-3 last"><div id="vejaTambem"><ul></ul></div><div id="linksRelacionados"><h2>Assuntos relacionados</h2><ul><li><a href="http://www.tse.jus.br/institucional/escola-judiciaria-eleitoral/revistas-da-eje/artigos/revista-eletronica-eje-n.-2-ano-5/por-que-a-urna-eletronica-e-segura">As vozes da sociedade e a produção legislativa</a></li><li><a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/hash/resumos-digitais-hash-dos-sistemas-eleitorais">Resumos digitais (hashes) dos sistemas eleitorais</a></li><li><a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/hash/resumos-digitais-hash-das-consultas-populares-estaduais">Resumos digitais (hashes) das consultas populares estaduais de 2010</a></li><li><a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/hash/resumos-digitais-hash-das-consultas-populares-municipais">Resumos digitais (hashes) das consultas populares municipais de 2009</a></li></ul></div></div></div></div></div><div id="viewlet-below-content"></div></div>
+                    </div>
+                    <!--Fim conteÃdo-->
+                    <!--ComeÃ§o coluna direita-->
+                    <!--Fim coluna direita-->
+                </section><!--Fim ConteÃºdo Principal--></div>
+        </section>
+<!--SeÃ§Ã£o mapa do site-->
+    <footer id="mapaSite_bg" role="navigation" class="span-32 last">
+      <div class="container">
+        <div class="span-32">
+          <div id="mapa_site" class="span-15 last">Mapa do site</div>
+        </div>
+        <nav>
+          <div class="menu-rodape">
+            <h2>Institucional</h2>
+            <ul class="nivel_mapaSite">
+              <li>
+                <a href="http://www.tse.jus.br/institucional/biblioteca/biblioteca-do-tse" target="_self">Biblioteca</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/catalogo-de-publicacoes/lista-do-catalogo-de-publicacoes" target="_self">Catálogo de publicações</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/concurso-publico/concurso-publico-2011" target="_self">Concurso público</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/o-tse/o-tse" target="_self">Conheça o TSE</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/corregedoria-geral-eleitoral/institucional" target="_self">Corregedoria-Geral Eleitoral</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/escola-judiciaria-eleitoral/institucional" target="_self">Escola Judiciária Eleitoral</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/museu-do-voto/museu-do-voto" target="_self">Museu do Voto</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/planejamento-e-gestao/planejamento-e-gestao" target="_self">Planejamento e Gestão</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/tribunais-regionais" target="_self">Tribunais regionais</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <ul class="nivel_mapaSite">
+              <h3>Ministros</h3>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/ministros/agenda-do-presidente-e-dos-ministros" target="_self">Agenda do presidente e dos ministros</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/ministros/ministros" target="_self">Ministros</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/ministros/ministros-e-ex-ministros" target="_self">Ministros e ex-ministros</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/institucional/ministros/presidencias-e-ministros-do-periodo" target="_self">Presidências e ministros do período</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <h2>Área jurídica</h2>
+            <ul class="nivel_mapaSite">
+              <h3>Jurisprudência</h3>
+              <li>
+                <a href="http://www.tse.jus.br/jurisprudencia/informativo-tse-1/informativo-tse" target="_self">Informativo TSE</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/jurisprudencia/inteiro-teor" target="_self">Inteiro teor</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/jurisprudencia/julgados-historicos/julgados-historicos" target="_self">Julgados Históricos</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/jurisprudencia/jurisprudencia-por-assunto" target="_self">Jurisprudência por assunto</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/jurisprudencia/pesquisa-de-jurisprudencia/jurisprudencia" target="_self">Pesquisa</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/jurisprudencia/prazos-de-desincompatibilizacao" target="_self">Prazos de desincompatibilização</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/jurisprudencia/publicacoes/publicacoes-de-jurisprudencia" target="_self">Publicações</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/codigo-eleitoral/sumulas/sumulas-do-tse" target="_self">Súmulas</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <ul class="nivel_mapaSite">
+              <h3>Legislação</h3>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/codigo-eleitoral-anotado/codigo-eleitoral" target="_self">Código Eleitoral Anotado e Legislação Complementar</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/constituicao-federal" target="_self">Constituição Federal</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/diarios-oficiais-sintse" target="_self">Diários oficiais - SinTSE</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/legislacao-eleitoral-em-audio/serie-legislacao-eleitoral-em-audio" target="_self">Legislação eleitoral em áudio</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/pesquisa-por-e-mail" target="_self">Pesquisa por e-mail</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/provimentos-cge" target="_self">Provimentos CGE</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/regimento-interno" target="_self">Regimento interno</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/voce-e-direito/voce-e-direito" target="_self">Você e Direito</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <ul class="nivel_mapaSite">
+              <h3>Legislação compilada</h3>
+              <li>
+                <a href="http://www.tse.jus.br/legislacao/legislacao-compilada/legislacao-compilada/leg_compilada" target="_self">Legislação compilada</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <ul class="nivel_mapaSite">
+              <h3>Serviços judiciais</h3>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/acompanhamento-processual-push" target="_self">Acompanhamento processual e Push</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/diario-da-justica-eletronico-1" target="_self">Diário da Justiça Eletrônico</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/guia-de-recolhimento-da-uniao-gru" target="_self">Guia de Recolhimento da União (GRU)</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/mural-eletronico-e-comunicacoes-judiciais/mural-eletronico-e-comunicacoes-judiciais" target="_self">Mural eletrônico e Comunicações judiciais</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/pautas-de-julgamento" target="_self">Pautas de julgamento</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/peticao-eletronica/sistema-de-peticao-eletronica" target="_self">Petição eletrônica</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/processo-judicial-eletronico/processo-judicial-eletronico" target="_self">Processo Judicial Eletrônico (PJe)</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/processos-julgados" target="_self">Processos julgados</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/tramitacao-processual/tramitacao-processual" target="_self">Tramitação processual</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/servicos-judiciais" target="_self">Mais serviços </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <h2>Eleições</h2>
+            <ul class="nivel_mapaSite">
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/contas-eleitorais/contas-eleitorais-normas-e-regulamentos" target="_self">Contas eleitorais</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/eleicoes-2016/eleicoes-2016" target="_self">Eleições 2016</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/eleicoes-anteriores/eleicoes-anteriores" target="_self">Eleições anteriores</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/eleicoes-suplementares/eleicoes-suplementares" target="_self">Eleições suplementares</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/estatisticas/estatisticas-eleitorais" target="_self">Estatísticas eleitorais</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/plebiscitos-e-referendos/plebiscito-e-referendo" target="_self">Plebiscitos e referendos</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/processo-eleitoral-brasileiro/funcionamento-do-processo-eleitoral-no-brasil" target="_self">Processo Eleitoral no Brasil</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <ul class="nivel_mapaSite">
+              <h3>Biometria e urna eletrônica</h3>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/biometria-1" target="_self">Biometria</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/eleicoes" target="_self">Informatização do voto</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/perguntas-frequentes" target="_self">Perguntas frequentes sobre o sistema eletrônico</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/seguranca" target="_self">Segurança</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleicoes/biometria-e-urna-eletronica/urna-eletronica" target="_self">Urna eletrônica</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <h2>Eleitor</h2>
+            <ul class="nivel_mapaSite">
+              <li>
+                <a href="http://www.tse.jus.br/eleitor/disque-eleitor/disque-eleitor" target="_self">Disque-Eleitor</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleitor/eleitor-no-exterior/votacao-no-exterior" target="_self">Eleitor no exterior</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleitor/estatisticas-de-eleitorado/estatisticas-de-eleitorado" target="_self">Estatísticas do eleitorado</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleitor/glossario/glossario-eleitoral" target="_self">Glossário Eleitoral</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleitor/mesario/canal-do-mesario" target="_self">Mesário</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleitor/zonas-eleitorais/zonas-eleitorais-cartorios" target="_self">Zonas eleitorais - cartórios</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/eleitor/servicos/mais-servicos" target="_self">Mais serviços aos eleitores</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <h2>
+              <a href="http://www.tse.jus.br/imprensa" target="_self">Imprensa</a>
+            </h2>
+            <ul class="nivel_mapaSite"></ul>
+          </div>
+          <div class="menu-rodape">
+            <h2>Partidos</h2>
+            <ul class="nivel_mapaSite">
+              <li>
+                <a href="http://www.tse.jus.br/partidos/contas-partidarias/contas-partidarias" target="_self">Contas partidárias</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/partidos/filiacao-partidaria/filiacao-partidaria" target="_self">Filiação</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/partidos/fundo-partidario" target="_self">Fundo Partidário</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/partidos/partidos-politicos/registrados-no-tse" target="_self">Partidos políticos</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/partidos/propaganda-partidaria/propaganda-partidaria" target="_self">Propaganda partidária</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-rodape">
+            <h2>Transparência</h2>
+            <ul class="nivel_mapaSite">
+              <li>
+                <a href="http://www.tse.jus.br/transparencia/acesso-a-informacao/acesso-a-informacao" target="_self">Acesso à Informação</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/transparencia/contas-publicas/contas-publicas" target="_self">Contas públicas</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/transparencia/estatistica-processual/estatistica-processual" target="_self">Estatística processual</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/transparencia/gestao-orcamentaria-financeira-e-fiscal/execucao-orcamentaria-e-financeira" target="_self">Gestão orçamentária, financeira e fiscal</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/transparencia/licitacoes-e-contratos/licitacoes-e-contratos" target="_self">Licitações e contratos</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/transparencia/relatorio-cnj/relatorios-cnj" target="_self">Relatórios CNJ</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/transparencia/remuneracoes-e-beneficios" target="_self">Remunerações e benefícios</a>
+              </li>
+              <li>
+                <a href="http://www.tse.jus.br/servicos-judiciais/tramitacao-processual/tramitacao-processual" target="_self">Tramitação processual</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <section id="rodapePlone" role="contentinfo" class="span-32 last"><div class="span-32 last"><a class="fn org url" href="http://www.tse.jus.br">
+                         tse.jus.br
+                    </a></div><a class="fn org url" href="http://www.tse.jus.br/" style="display:none;">Tribunal Superior Eleitoral</a><span class="adr"><span class="type" style="display:none;">Judiciário:</span><span class="locality"><a href="http://www.tse.jus.br/institucional/o-tse/mapa" title="ícone de como chegar"><img style="margin-right:8px;" alt="ícone de como chegar" src="http://www.tse.jus.br/imagens/imagens/tse-icone-de-como-chegar/image_destaque_interno" />Como chegar</a><br />
+Setor de Administração  Federal Sul (SAFS)</span>, <span class="street-address">Quadra 7, Lotes 1/2</span>, <abbr class="region" title="Distrito Federal">Brasília/DF</abbr> – <span class="postal-code">70070-600</span></span> - <span class="tel">Tel.: <a href="tel:6130307000">(61) 3030-7000</a></span><br /><a href="http://www.tse.jus.br/eleitor/disque-eleitor/ouvidoria">Ouvidoria</a> - <span class="tel"><a href="tel:08006480005">0800 648 0005</a></span><br />
+Protocolo Administrativo: sala V-101, <span class="type">fax: <span class="tel">(61) 3030-9850</span></span>
+- <a href="http://www.tse.jus.br/institucional/o-tse/comunicados/regras-para-envio-de-documentos-ao-tse">regras de envio</a><br />
+Protocolo Judiciário: sala V-504, <span class="type">fax: (61) <span class="tel"><a href="tel:30309951">3030-9951</a></span></span><br />
+Horário de funcionamento dos protocolos: das 11h às 19h
+<br /><div class="voltar-topo">Voltar ao topo</div></section>
+      </div>
+    </footer>
+<!--Fim seÃ§Ã£o mapa do site-->
+    <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-16748902-3']);
+                _gaq.push(['_trackPageview']);
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+    <script type="text/javascript">
+                window.webtrendsAsyncInit=function(){
+                    var dcs=new Webtrends.dcs().init({
+                        dcsid:"dcssh8p8cblq1tgwok8milwk0_8c7s",
+                        domain:"sdc.tse.jus.br",
+                        timezone:-3,
+                        i18n:true,
+                        download:true,
+                        downloadtypes:"xls,doc,pdf,txt,csv,zip,docx,xlsx,rar,gzip",
+                        anchor:true,
+                        cookieexpires:0,
+                        fpcdom:".tse.jus.br",
+                        plugins:{
+                            //hm:{src:"//s.webtrends.com/js/webtrends.hm.js"}
+                        }
+                        }).track();
+                };
+
+                (function(){
+                    var s=document.createElement("script"); s.async=true; s.src="http://www.justicaeleitoral.jus.br/temas/js/webtrends.min.js";
+                    var s2=document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s,s2);
+                }());
+            </script>
+    <noscript id="webtrends">
+      <img alt="dcsimg do webtrends" id="dcsimg" width="1" height="1" src="//sdc.tse.jus.br/dcssh8p8cblq1tgwok8milwk0_8c7s/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=10.4.7&amp;dcssip=www.tse.jus.br" />
+    </noscript>
+  </body>
+</html>

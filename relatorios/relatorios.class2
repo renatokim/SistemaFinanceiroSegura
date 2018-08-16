@@ -1,0 +1,211 @@
+<?php
+
+require_once('bancodados.class.php');
+
+class Relatorio extends Banco
+ {
+	public function relatdata($dataini, $datafin)
+	 {
+	  $sql = "SELECT extratos.id, extratos.id_conta_corrente, extratos.data_emissao, 
+	              extratos.historico, extratos.numero_doc, extratos.valor, 
+				  extratos.conta_caixa, conta_caixa.descricao, extratos.obs 
+	          FROM extratos,conta_caixa  
+	          WHERE extratos.data_emissao>='$dataini' 
+	          AND extratos.data_emissao<='$datafin' 
+	          AND extratos.conta_caixa=conta_caixa.num_conta_caixa 
+	          ORDER BY extratos.data_emissao, extratos.id_conta_corrente, extratos.id";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+
+	public function relatconc($dataini, $datafin, $cntcx_conc_entrada, $cntcx_conc_saida)
+	 {
+	  $sql = "SELECT extratos.id, extratos.id_conta_corrente, extratos.data_emissao, 
+	              extratos.historico, extratos.numero_doc, extratos.valor, 
+				  extratos.conta_caixa, conta_caixa.descricao, extratos.obs 
+	          FROM extratos,conta_caixa  
+	          WHERE extratos.data_emissao>='$dataini' 
+	          AND extratos.data_emissao<='$datafin' 
+	          AND extratos.conta_caixa=conta_caixa.num_conta_caixa
+			  AND (extratos.conta_caixa=$cntcx_conc_entrada
+			  OR extratos.conta_caixa=$cntcx_conc_saida)
+	          ORDER BY extratos.data_emissao, extratos.conta_caixa, extratos.valor, extratos.id,  extratos.id_conta_corrente";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+
+	
+	
+	public function relatbanco($dataini, $datafin)
+	 {
+	  $sql = "SELECT extratos.id, extratos.id_conta_corrente, extratos.data_emissao, 
+	              extratos.historico, extratos.numero_doc, extratos.valor, 
+				  extratos.conta_caixa, conta_caixa.descricao, extratos.obs 
+	          FROM extratos,conta_caixa  
+	          WHERE extratos.data_emissao>='$dataini' 
+	          AND extratos.data_emissao<='$datafin' 
+	          AND extratos.conta_caixa=conta_caixa.num_conta_caixa 
+	          ORDER BY extratos.id_conta_corrente, extratos.data_emissao,
+  			      extratos.id, extratos.valor";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+
+	public function relatconta()
+	 {
+	  $sql = "SELECT id, descricao, numero_conta, obs FROM conta_corrente ORDER BY id";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+
+	public function relatcadcontacaixa()
+	 {
+	  $sql = "SELECT id, num_conta_caixa, descricao FROM conta_caixa";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+
+	public function chqpendentehoje($id_conta_corrente, $datahoje)
+	 {
+	  $sql = "SELECT cheques.id, cheques.id_conta_corrente, cheques.data_emissao,
+     	             cheques.historico, cheques.numero_doc, cheques.valor, 
+					 cheques.data_vencimento, cheques.conta_caixa, conta_caixa.descricao
+			  FROM cheques, conta_caixa 
+			  WHERE data_baixa IS NULL
+			  AND id_conta_corrente=$id_conta_corrente
+			  AND data_vencimento<='$datahoje'
+			  AND cheques.conta_caixa=conta_caixa.num_conta_caixa ORDER BY data_vencimento";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+	 
+	public function chqdepoishoje($id_conta_corrente, $datahoje)
+	 {
+	  $sql = "SELECT cheques.id, cheques.id_conta_corrente, cheques.data_emissao,
+     	             cheques.historico, cheques.numero_doc, cheques.valor, 
+					 cheques.data_vencimento, cheques.conta_caixa, conta_caixa.descricao
+			  FROM cheques, conta_caixa 
+			  WHERE data_baixa IS NULL
+			  AND id_conta_corrente=$id_conta_corrente
+			  AND data_vencimento>'$datahoje'
+			  AND cheques.conta_caixa=conta_caixa.num_conta_caixa ORDER BY data_vencimento";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }	
+
+	public function chqtodos($id_conta_corrente)
+	 {
+	  $sql = "SELECT cheques.id, cheques.id_conta_corrente, cheques.data_emissao,
+     	             cheques.historico, cheques.numero_doc, cheques.valor, 
+					 cheques.data_vencimento, cheques.conta_caixa, conta_caixa.descricao
+			  FROM cheques, conta_caixa 
+			  WHERE id_conta_corrente=$id_conta_corrente
+			  AND cheques.conta_caixa=conta_caixa.num_conta_caixa ORDER BY cheques.numero_doc";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+
+	 
+
+	public function relatoriocaixa($dataini, $datafin)
+	 {
+	  $sql = "SELECT extratos.id, extratos.id_conta_corrente, extratos.data_emissao, 
+	                 extratos.historico, extratos.numero_doc, extratos.valor, 
+				     extratos.conta_caixa, conta_caixa.descricao, extratos.obs 
+	          FROM extratos,conta_caixa  
+	          WHERE extratos.data_emissao>='$dataini' 
+	          AND extratos.data_emissao<='$datafin' 
+	          AND extratos.conta_caixa=conta_caixa.num_conta_caixa 
+	          AND (extratos.id_conta_corrente=8 
+	               OR extratos.id_conta_corrente=14) 
+	          ORDER BY extratos.data_emissao DESC, extratos.id_conta_corrente,
+	                   extratos.valor, extratos.id";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+
+	public function relatcntcx($dataini, $datafin)
+	 {
+	  $sql = "SELECT extratos.id, extratos.id_conta_corrente, extratos.data_emissao, 
+	              extratos.historico, extratos.numero_doc, extratos.valor, 
+				  extratos.conta_caixa, conta_caixa.descricao, extratos.obs 
+	          FROM extratos,conta_caixa  
+	          WHERE extratos.data_emissao>='$dataini' 
+	          AND extratos.data_emissao<='$datafin' 
+	          AND extratos.conta_caixa=conta_caixa.num_conta_caixa 
+	          ORDER BY extratos.conta_caixa, extratos.data_emissao,
+  			      extratos.id_conta_corrente, extratos.id";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+	 
+	public function relatcntcxgroupby($dataini, $datafin)
+	 {
+	  $sql = "SELECT extratos.conta_caixa AS 'Conta-caixa', conta_caixa.descricao AS 'Descrição', SUM(extratos.valor) AS 'Valor'
+			  FROM extratos, conta_caixa 
+			  WHERE extratos.conta_caixa=conta_caixa.num_conta_caixa 
+			  AND data_emissao>'$dataini' 
+			  AND data_emissao<'$datafin' 
+			  GROUP BY extratos.conta_caixa 
+			  ORDER BY extratos.conta_caixa";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }
+	
+	// RELATORIO DE GRUPOS DE CONTA-CAIXA - SOMA ORCAMENTO E OFICIAL
+	public function addprovisorio($cx_orig, $cx_prov, $posicao, $descricao, $valor) 
+	 {
+	  $sql = "INSERT INTO grupo_provisorio VALUES ('', $cx_orig, $cx_prov, $posicao, '$descricao', $valor)";
+	  $resultado = $this->query($sql);
+	 }
+	 
+	 public function deleteprovisorio() 
+	  {
+	  $sql = "DELETE FROM grupo_provisorio";
+	  $this->query($sql);
+	  }
+	
+	public function relatcntcxgroupbysoma()
+	 {
+	  $sql = "SELECT grupo_provisorio.cntcx_provisorio AS 'Conta-caixa', conta_caixa.descricao AS 'Descrição', SUM(grupo_provisorio.valor) AS 'Valor'
+			  FROM grupo_provisorio, conta_caixa
+			  WHERE grupo_provisorio.cntcx_provisorio=conta_caixa.num_conta_caixa
+			  GROUP BY grupo_provisorio.cntcx_provisorio 
+			  ORDER BY grupo_provisorio.posicao, grupo_provisorio.cntcx_provisorio";
+			  
+	  $resultado = $this->query($sql);
+	  
+	  return $resultado;
+	 }	
+	
+
+
+
+
+	 
+}
+
+
+?>

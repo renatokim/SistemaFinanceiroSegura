@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt-br">
+  
+<!-- Mirrored from www.tse.jus.br/hotsites/simulador-2016/vereador.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Oct 2016 04:44:54 GMT -->
+<head>
+    <title>Treinamento</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="css/ui-lightness/jquery-ui-1.10.4.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/lib/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="css/urna.css" />
+    <link type="text/css" rel="stylesheet" href="css/vereador.css" />
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.pulse.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/slick.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.noty.packaged.min.js"></script>
+    <script type="text/javascript" src="js/urna.js"></script>
+    <script type="text/javascript" src="js/vereador.js"></script>
+   </head>
+   <body>
+        <div class="listaCandidatos" title="Consulte a lista de candidatos">
+					<div><img id="lamina1" src="image/candidatos/91Vereador.jpg"  /></div>
+					<div><img id="lamina2" src="image/candidatos/92Vereador.jpg"  /></div>
+					<div><img id="lamina3" src="image/candidatos/93Vereador.jpg"  /></div>
+					<div><img id="lamina4" src="image/candidatos/94Vereador.jpg"  /></div>
+                    <div><img id="lamina5" src="image/candidatos/95Vereador.jpg"  /></div>
+		</div>
+        <div id="conteudo">
+            <img id="tela" src="image/tela.jpg" width="451" height="423" border="0">
+            <img id="topo" src="image/topo.jpg" width="192" height="183" border="0">
+            <img id="faixaDir" src="image/faixaDir.jpg" width="38" height="357" border="0">
+            <img id="ladoEsqTec" src="image/ladoEsqTec.jpg" width="19" height="160" border="0">
+            <img id="n_1" src="image/n1.jpg" width="51" height="41" border="0">
+            <img id="n_2" src="image/n2.jpg" width="48" height="41" border="0">
+            <img id="n_3" src="image/n3.jpg" width="48" height="41" border="0">
+            <img id="ladoDirTec" src="image/ladoDirTec.jpg" width="26" height="152" border="0">
+            <img id="n_4" src="image/n4.jpg" width="51" height="42" border="0">
+            <img id="n_5" src="image/n5.jpg" width="48" height="42" border="0">
+            <img id="n_6" src="image/n6.jpg" width="48" height="42" border="0">
+            <img id="n_7" src="image/n7.jpg" width="51" height="41" border="0">
+            <img id="n_8" src="image/n8.jpg" width="48" height="41" border="0">
+            <img id="n_9" src="image/n9.jpg" width="48" height="41" border="0">
+            <img id="ptabaixo7" src="image/ptabaixo7.jpg" width="51" height="36" border="0">
+            <img id="n_0" src="image/n0.jpg" width="56" height="36" border="0">
+            <img id="ptabaixo9" src="image/ptabaixo9.jpg" width="40" height="28" border="0">
+            <img id="confirma" src="image/confirma.jpg" width="66" height="49" border="0">
+            <img id="branco" src="image/branco.jpg" width="63" height="41" border="0">
+            <img id="corrige" src="image/corrige.jpg" width="63" height="41" border="0">
+            <img id="abaixoTec" src="image/abaixoTec.jpg" width="226" height="27" border="0">
+        </div>
+        <div id="painel">
+            <div id="fase">Treinamento</div>
+            <div id="cabecalho">SEU VOTO PARA</div>
+            <div id="cxFoto"><img id="foto" src="#" width="135" height="145" /></div>
+            <div id="cargo">Vereador</div>
+            <span id="habilitaNumeros">true</span>
+            <div id="numeros">
+                <div id="numeroLabel">N&uacute;mero:</div>
+                <div id="cxNumero1"></div>
+                <div id="cxNumero2"></div>
+                <div id="cxNumero3"></div>
+                <div id="cxNumero4"></div>
+                <div id="cxNumero5"></div>
+            </div>
+            <div id="avisoErrado">N&Uacute;MERO ERRADO</div>
+            <div id="avisoInexistente">CANDIDATO INEXISTENTE</div>
+            <div id="avisoNulo">VOTO NULO</div>
+            <div id="avisoLegenda">VOTO DE LEGENDA</div>
+            <div id="avisoBranco">VOTO EM BRANCO</div>
+            <div id="candidato">
+                <div id="candidatoLabel">Nome:</div>
+                <div id="candidatoNome"></div>
+            </div>
+            <div id="partido">
+                <div id="partidoLabel">Partido:</div>
+                <div id="partidoNome"></div>            
+            </div>
+            <div id="resultado"></div>
+            <div id="regua"></div>
+            <span id="habilitaConfirma">false</span>
+            <span id="habilitaCorrige">false</span>
+	        <div id="instrucoes">
+                <div id="obs">(voto de legenda)</div>
+                <span id="textoInstrucoes">Aperte a tecla:</span><br />
+                <span id="verde">VERDE</span><span id ="restoVerde">para CONFIRMAR este voto</span><br />
+                <span id="laranja">LARANJA</span><span id ="restoLaranja">para REINICIAR este voto</span><br />
+            </div>
+        </div>
+        <div id="reiniciarVotacao">
+            <a href="http://www.tse.jus.br/eleicoes/eleicoes-2016/simulador-de-votacao/" target="_parent">Nova simula&ccedil;&atilde;o</a>
+        </div>
+        <audio id="audioOps">  
+            <source  src="sons/ops.mp3" type="audio/mp3" />
+            <source  src="sons/ops.wav" type="audio/wav" />
+            <div style="display:none">
+                    <object id="mediaPlayer" type="audio/mpeg" width="1" height="1">
+                        <param name="src" value="sons/ops.mp3" />
+                    </object>
+            </div>
+        </audio>
+    </body>
+
+<!-- Mirrored from www.tse.jus.br/hotsites/simulador-2016/vereador.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Oct 2016 04:45:19 GMT -->
+</html>
+       <script id="f5_cspm">(function(){var f5_cspm={f5_p:'OPLICIEFNPACMELCNFJCGKOJNCEAFKDAGOBPCPBGJBIBPHFHMHPGOGIMIGFAKOMJAAJIJAOIGOMKKFMOAAMLAMLCOEJHHFHEPNNNIODFANAPEFKNMGLNODKKKHLEGHCH',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,32,(latency>>8));str=f5_cspm.set_byte(str,33,(latency&0xff));str=f5_cspm.set_byte(str,27,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avraaaaaaaaaaaaaaaa='+encodeURIComponent(cookie_val)+';path=/';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script>

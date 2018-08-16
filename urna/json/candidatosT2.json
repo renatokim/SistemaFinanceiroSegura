@@ -1,0 +1,27 @@
+{
+"governador": [
+      {"numero": "91", "partido":"PEsp","nome":"V\u00f4lei"                          ,"foto":"91_volei"},                        
+      {"numero": "91a","partido":"PEsp","nome":"T\u00eanis"                          ,"foto":"91_tenis"},                                                           
+      {"numero": "94", "partido":"PFest","nome":"Dia da Independ\u00eancia do Brasil","foto":"94_independencia_do_brasil"},
+      {"numero": "94a","partido":"PFest","nome":"Natal"                              ,"foto":"94_natal"},           
+	  {"numero": "45","partido":"PSDB","nome":"lce Rocha","foto":"ilce-rocha-d"},	  
+      {"numero": "45a","partido":"PSDB","nome":"lce Rocha","foto":"ilce-rocha-d-vice"}
+   ],
+"presidente": [
+      {"numero": "91", "partido":"PEsp","nome":"Futebol"                       ,"foto":"91_futebol"},      
+      {"numero": "91a","partido":"PEsp","nome":"Jud\u00f4"                          ,"foto":"91_judo"},      
+      {"numero": "92", "partido":"PMus","nome":"Rock"                          ,"foto":"92_rock"},          
+      {"numero": "92a","partido":"PMus","nome":"M\u00fasica Popular Brasileira","foto":"92_musica_popular_brasileira"},
+	  {"numero": "45","partido":"PSDB","nome":"lce Rocha","foto":"ilce-rocha-d"},	  
+      {"numero": "45a","partido":"PSDB","nome":"lce Rocha","foto":"ilce-rocha-d-vice"}	  
+   ],
+"prefeito": [
+      {"numero": "91", "partido":"PEsp","nome":"Nata\u00e7\u00e3o" ,"foto":"91_natacao"}, 
+	  {"numero": "91a","partido":"PEsp","nome":"Judo"              ,"foto":"91_judo"},
+	  {"numero": "92","partido":"PEsp","nome":"ForrÃ³"             ,"foto":"92_forro"},	  
+      {"numero": "92a","partido":"PMus","nome":"Samba"             ,"foto":"92_samba"},
+	  {"numero": "45","partido":"PSDB","nome":"lce Rocha","foto":"ilce-rocha-d"},	  
+      {"numero": "45a","partido":"PSDB","nome":"lce Rocha","foto":"ilce-rocha-d-vice"}	  
+	]
+   
+}
